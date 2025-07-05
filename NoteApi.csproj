@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Common\Models\" />
+    <Folder Include="Common\Extensions\" />
+    <Folder Include="Features\Auth\" />
+    <Folder Include="Features\Tags\" />
+    <Folder Include="Features\Notes\" />
+    <Folder Include="Infrastructure\Database\" />
+    <Folder Include="Infrastructure\Middleware\" />
+    <Folder Include="Infrastructure\Services\" />
+  </ItemGroup>
+
+</Project>
