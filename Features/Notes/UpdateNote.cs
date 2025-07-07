@@ -29,13 +29,13 @@ namespace NoteApi.Features.Notes
                  .WithSummary("Updates an existing note");
 
             private static async Task<IResult> Handle(
-    int id,
-    Command command,
-    ClaimsPrincipal userClaims,
-    AppDbContext db,
-    IValidator<Command> validator,
-    ILogger<Endpoint> logger,
-    CancellationToken ct)
+                int id,
+                Command command,
+                ClaimsPrincipal userClaims,
+                AppDbContext db,
+                IValidator<Command> validator,
+                ILogger<Endpoint> logger,
+                CancellationToken ct)
             {
                 var validationResult = await validator.ValidateAsync(command, ct);
                 if (!validationResult.IsValid)

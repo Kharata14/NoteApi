@@ -8,7 +8,6 @@ namespace NoteApi.Infrastructure.Services
     {
         public Task TransformAsync(OpenApiDocument document, OpenApiDocumentTransformerContext context, CancellationToken cancellationToken)
         {
-            // თუ Components ობიექტი არ არსებობს, შევქმნათ ის.
             document.Components ??= new OpenApiComponents();
 
             var securityScheme = new OpenApiSecurityScheme

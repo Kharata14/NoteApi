@@ -31,12 +31,12 @@ namespace NoteApi.Features.Notes
                  .WithSummary("Creates a new note");
 
             private static async Task<IResult> Handle(
-    Command command,
-    ClaimsPrincipal userClaims,
-    AppDbContext db,
-    IValidator<Command> validator,
-    ILogger<Endpoint> logger,
-    CancellationToken ct)
+                Command command,
+                ClaimsPrincipal userClaims,
+                AppDbContext db,
+                IValidator<Command> validator,
+                ILogger<Endpoint> logger,
+                CancellationToken ct)
             {
                 var validationResult = await validator.ValidateAsync(command, ct);
                 if (!validationResult.IsValid)
